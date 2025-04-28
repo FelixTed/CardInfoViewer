@@ -26,7 +26,7 @@ export class CardInputFormComponent {
   @Output() cardNumberOutput = new EventEmitter<string>()
   @Output() expirationMonthOutput = new EventEmitter<number>()
   @Output() expirationYearOutput = new EventEmitter<number>()
-  @Output() cvcOutput = new EventEmitter<number>()
+  @Output() cvcOutput = new EventEmitter<string>()
 
   @Output() validForm = new EventEmitter<boolean>();
   
@@ -88,7 +88,7 @@ export class CardInputFormComponent {
   validateCVC(){
     if(String(this.cvc)?.length === 3){
       this.validCVC = true;
-      this.cvcOutput.emit(Number(this.cvc))
+      this.cvcOutput.emit(this.cvc)
     }else{
       this.validCVC = false
     }

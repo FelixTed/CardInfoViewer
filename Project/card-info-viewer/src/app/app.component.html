@@ -5,9 +5,9 @@
 <div class="main-div">
     <div class="card-div">
         <app-card-front></app-card-front>
-        <app-card-back></app-card-back>
+        <app-card-back [cvc]="cvc"></app-card-back>
     </div>
     <div class="form-div">
-        <app-card-input-form></app-card-input-form>
+        <app-card-input-form (cvcOutput)="handleCVCOutput($event)"></app-card-input-form>
     </div>
 </div>

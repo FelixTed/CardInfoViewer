@@ -11,5 +11,9 @@ import { CardBackComponent } from "./card-back/card-back.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-
+  cvc:string = ''
+  
+  handleCVCOutput(cvc:string){
+    this.cvc = cvc;
+  }
 }
