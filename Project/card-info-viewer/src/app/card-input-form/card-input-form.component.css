@@ -1,6 +1,7 @@
 .input-field-large{
     display: flex;
     flex-direction: column;
+    margin-bottom:10px;
     width: 100%;
 }
 
@@ -14,17 +15,19 @@ input{
 .input-group{
     display: flex;
     width: 100%;
+    margin-bottom:10px;
 }
 
 .input-field-cvc{
-    width: 100%;
+    width: 50%;
+
     display: flex;
     flex-direction: column;
 }
 .input-field-date{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width:50%;
 }
 
 .expiration-date-div{
@@ -34,9 +37,18 @@ input{
 
 input{
     padding: 7px;
+    margin:3px;
     font-size: 17px;
+    min-width: none;
 }
 
+#card-expiration-month{
+    width: 50%;
+}
+
+#card-expiration-year{
+    width:50%;
+}
 
 
 form{
@@ -44,3 +56,29 @@ form{
     flex-direction: column;
     align-items: center;
 }
+
+button{
+    background-color: hsl(278, 68%, 11%);
+    color:white;
+    width: 100%;
+    padding: 7px;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.invalid-text{
+    color: hsl(0, 100%, 66%);
+    font-size: 12px;
+    visibility: hidden;
+}
+.invalid-text.visible{
+    visibility: visible;
+}
+
+.invalid-input{
+    border: 2px solid hsl(0, 100%, 66%);
+}
+.invalid-input:focus {
+    border: 2px solid red;
+    outline: none;
+  }

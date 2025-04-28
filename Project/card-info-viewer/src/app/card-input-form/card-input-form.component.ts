@@ -64,6 +64,9 @@ export class CardInputFormComponent {
   }
 
   validateExpirationMonth(){
+    console.log("c")
+    this.expirationMonth = this.expirationMonth.replace(/\D/g, '');
+
     if(String(this.expirationMonth)?.length === 2){
       this.validExpirationMonth = true
       this.expirationMonthOutput.emit(Number(this.expirationMonth))
