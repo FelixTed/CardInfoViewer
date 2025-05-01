@@ -1,0 +1,25 @@
+img{
+    z-index: 1;
+    position: relative;
+    left:0;
+    top:0;
+}
+
+.image-container{
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+
+.content{
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:44%;
+    left:80%;
+}
+
+div{
+    color:white;
+}
