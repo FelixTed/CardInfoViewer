@@ -1,6 +1,15 @@
 <div class="image-container">
     <img src="bg-card-front.png">
-    <div class="content">
-        hey
+    <div class="logo">
+        <img src="card-logo.svg">
+    </div>
+    <div class="name">
+        {{name()}}
+    </div>
+    <div class="card-number">
+        {{formattedCardNumber()}}
+    </div>
+    <div class="expiration-date">
+        {{expirationMonth()}}/{{expirationYear()}}
     </div>
 </div>

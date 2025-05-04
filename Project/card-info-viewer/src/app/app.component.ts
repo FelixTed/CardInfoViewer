@@ -12,8 +12,30 @@ import { CardBackComponent } from "./card-back/card-back.component";
 })
 export class AppComponent {
   cvc:string = ''
+  name:string = ''
+  cardNumber:string = ''
+  expirationYear:string = ''
+  expirationMonth:string = ''
+
   
   handleCVCOutput(cvc:string){
     this.cvc = cvc;
   }
+
+  handleNameOutput(name:string){
+    this.name = name.toUpperCase()
+  }
+
+  handleCardNumberOutput(cardNumber:string){
+    this.cardNumber = cardNumber
+  }
+
+  handleDateYearOutput(expirationDate:number){
+    this.expirationYear = String(expirationDate)
+  }
+
+  handleDateMonthOutput(expirationDate:number){
+    this.expirationMonth = String(expirationDate)
+  }
+
 }

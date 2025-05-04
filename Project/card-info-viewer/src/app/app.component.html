@@ -4,10 +4,10 @@
 
 <div class="main-div">
     <div class="card-div">
-        <app-card-front></app-card-front>
+        <app-card-front [cardNumber]="cardNumber" [expirationMonth]="expirationMonth" [expirationYear]="expirationYear" [name]="name"></app-card-front>
         <app-card-back [cvc]="cvc"></app-card-back>
     </div>
     <div class="form-div">
-        <app-card-input-form (cvcOutput)="handleCVCOutput($event)"></app-card-input-form>
+        <app-card-input-form (cvcOutput)="handleCVCOutput($event)" (cardNumberOutput)="handleCardNumberOutput($event)" (expirationMonthOutput)="handleDateMonthOutput($event)" (expirationYearOutput)="handleDateYearOutput($event)" (nameOutput)="handleNameOutput($event)"></app-card-input-form>
     </div>
 </div>
